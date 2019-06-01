@@ -354,7 +354,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/01/hello-world/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/06/01/websocket/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Rindiaco">
@@ -374,7 +374,7 @@
           <h1 class="post-title" itemprop="name headline">
                 
                 
-                <a href="/2019/06/01/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
+                <a href="/2019/06/01/websocket/" class="post-title-link" itemprop="url">websocket 使用笔记</a>
               
             
           </h1>
@@ -399,7 +399,7 @@
                 
               
 
-              <time title="创建时间：2019-06-01 15:35:43 / 修改时间：16:12:53" itemprop="dateCreated datePublished" datetime="2019-06-01T15:35:43+08:00">2019-06-01</time>
+              <time title="创建时间：2019-06-01 17:42:35 / 修改时间：17:44:50" itemprop="dateCreated datePublished" datetime="2019-06-01T17:42:35+08:00">2019-06-01</time>
             
 
             
@@ -439,11 +439,14 @@
 
       
         
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
+          <h3 id="WebSocket-流程"><a href="#WebSocket-流程" class="headerlink" title="WebSocket 流程"></a>WebSocket 流程</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">graph LR</span><br><span class="line">连接--&gt;连接成功</span><br><span class="line">连接--&gt;超时处理</span><br><span class="line">连接--&gt;连接失败重连</span><br><span class="line">连接--&gt;心跳</span><br><span class="line">连接成功--&gt;发送消息</span><br><span class="line">发送消息--&gt;超时处理</span><br><span class="line">发送消息--&gt;失败重发</span><br><span class="line">连接成功--&gt;接收消息</span><br><span class="line">连接成功--&gt;可有可无_登录</span><br></pre></td></tr></table></figure>
+
+<h3 id="WebSocket-实现"><a href="#WebSocket-实现" class="headerlink" title="WebSocket 实现"></a>WebSocket 实现</h3><p>具体协议的实现由 websocketclient实现，我们只是使用它</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">implementation &apos;com.neovisionaries:nv-websocket-client:2.2&apos;</span><br></pre></td></tr></table></figure>
           <!--noindex-->
           
             <div class="post-button text-center">
-              <a class="btn" href="/2019/06/01/hello-world/#more" rel="contents">
+              <a class="btn" href="/2019/06/01/websocket/#more" rel="contents">
                 阅读全文 &raquo;
               </a>
             </div>
